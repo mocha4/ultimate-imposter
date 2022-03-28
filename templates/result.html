@@ -21,10 +21,10 @@
 
 		<!-- Result -->
 		<div class="results">
-			{% if prediction==1 %}
+			{% if prediction==0 %}
 				<h1 ><span class="pred"> PREDICTION :</span> <span class='danger'>The News is Unreliable !!</span></h1>
 				<img class="fakegif" src="{{ url_for('static', filename='this-post-contains-misinformation-pausebeforeyoushare.gif') }}" alt="SPAM Image">
-			{% elif prediction==0 %}
+			{% elif prediction==1 %}
 				<h1 ><span class="pred"> PREDICTION :</span> <span class='safe'> The News is Real !! :)</span></h1>
 				<img class="realgif" src="{{ url_for('static', filename='real-news-real-deal.gif') }}" alt="Not a spam image">
 			{% endif %}
